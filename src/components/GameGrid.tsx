@@ -3,6 +3,7 @@ import useGames from "../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
+import { MdAssignmentAdd } from "react-icons/md";
 
 const GameGrid = () => {
   const { data, error, isLoading } = useGames();
@@ -13,7 +14,7 @@ const GameGrid = () => {
       {error && <Text>{error}</Text>}
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 5 }}
-        spacing={10}
+        spacing={5}
         padding="10px"
       >
         {isLoading &&
